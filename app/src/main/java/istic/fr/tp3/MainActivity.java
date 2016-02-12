@@ -27,7 +27,7 @@ public class MainActivity extends Activity implements
         RegViewerFragment viewer = (RegViewerFragment) getFragmentManager()
                 .findFragmentById(R.id.regview_fragment);
 
-        if (viewer == null ) {//|| !viewer.isInLayout()) {
+        if (viewer == null || !viewer.isInLayout()) {
             System.out.println("GO VIEW");
             Intent showContent = new Intent(getApplicationContext(),
                     RegViewerActivity.class);

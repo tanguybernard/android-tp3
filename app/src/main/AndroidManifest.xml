@@ -2,6 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="istic.fr.tp3">
 
+
+
+    <supports-screens android:resizeable= "true"
+    android:smallScreens= "true"
+    android:normalScreens= "true"
+    android:largeScreens= "true"
+    android:xlargeScreens= "true"
+    android:anyDensity= "true"
+    />
+
+
+
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
