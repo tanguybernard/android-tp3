@@ -8,7 +8,6 @@
     tools:context="istic.fr.tp3.MainActivity">
 
 
-
     <include layout="@layout/content_main" />
 
 

@@ -8,7 +8,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.ListFragment;
+import android.support.v4.app.ListFragment;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,10 +23,12 @@ import android.widget.Toast;
 
 public class MyListFragment extends ListFragment {
 
-    OnURLSelectedListener mListener;
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
+
+
+
         String myUrl = "http://technoresto.org/vdf/";
 
         String selectedValue = (String) getListAdapter().getItem(position);
@@ -34,8 +36,12 @@ public class MyListFragment extends ListFragment {
 
         String content =myUrl+selectedValue.toLowerCase()+"/index.html";
 
+        ((MainActivity) getActivity()).setRegion(selectedValue);
+        ((MainActivity) getActivity()).refresh(content);
 
-        mListener.OnURLSelectedListener(content);
+
+        //mListener.OnURLSelectedListener(content);
+        //mListener.OnCurrentRegionSelected(selectedValue);
     }
 
     @Override
@@ -46,19 +52,6 @@ public class MyListFragment extends ListFragment {
                 R.layout.region_item));
     }
 
-    public interface OnURLSelectedListener {
-        public void OnURLSelectedListener(String tutUrl);
-    }
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnURLSelectedListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnRegSelectedListener");
-        }
-    }
 }
 

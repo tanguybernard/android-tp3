@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="region_lat">
+        <item>48.3181795</item>
+        <item>46.0833330</item>
+        <item>48.0266280</item>
+        <item>46.7624750</item>
+        <item>44.7710790</item>
+        <item>44.4932112</item>
+        <item>46.0972480</item>
+        <item>42.2691160</item>
+        <item>47.0525047</item>
+    </string-array>
+    <string-array name="region_long">
+        <item>7.4416241</item>
+        <item>4.6666670</item>
+        <item>0.3332350</item>
+        <item>5.6729159</item>
+        <item>5.7428060</item>
+        <item>-0.2340997</item>
+        <item>4.5809800</item>
+        <item>8.6809853</item>
+        <item>4.3837215</item>
+    </string-array>
+</resources>
