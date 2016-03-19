@@ -32,8 +32,6 @@ public class MainActivityFragment extends ListFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        System.out.println("MIAOU MAIN");
-
         super.onCreate(savedInstanceState);
         setListAdapter(ArrayAdapter.createFromResource(getActivity()
                         .getApplicationContext(), R.array.regions,

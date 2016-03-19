@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,21 +33,17 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        System.out.println("onCreateView location frag" );
+        Log.v("LocationFragment", "onCreateView()");
         View view = inflater.inflate(R.layout.location_fragment, null, false);
 
         FragmentManager fm = getChildFragmentManager();
         fragment = (SupportMapFragment) fm.findFragmentById(R.id.location_map);
         if (fragment == null) {
-            System.out.println("fragment null");
             fragment = SupportMapFragment.newInstance();
             fm.beginTransaction().replace(R.id.location_map, fragment).commit();
         }
 
-
-        //mapFragment = new SupportMapFragment();
-
-        fragment.getMapAsync(this);
+        fragment.getMapAsync(this);//very important
 
         return view;
     }
@@ -64,7 +61,6 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         this.mMap = googleMap;
-        System.out.println("EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
@@ -73,7 +69,6 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
     }
 
     public GoogleMap getmMap(){
-        System.out.println("RREREZRZEREZREZREZRZEREZRZE");
         return this.mMap;
     }
 

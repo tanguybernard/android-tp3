@@ -80,19 +80,6 @@ public class MainActivity extends FragmentActivity
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-
-        System.out.println(this.currentRegion);
-
-
-        //googleMap.addMarker(new MarkerOptions().position(currentRegionMap.getPosition()).title(currentRegionMap.getName()));
-        //googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition(currentRegionMap.getPosition(), 7, 0, 0)));
-
-
-        //googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(40.641051, -73.777485)));
-
-        //String mystring = this.getApplicationContext(), R.array.regions
-        //R.array.regions
-
         Resources res = getResources();
         String[] regionsName = res.getStringArray(R.array.regions);
 
@@ -101,9 +88,9 @@ public class MainActivity extends FragmentActivity
         boolean isSetPosition=false;
 
         for( int i = 0; i < regionsName.length; i++)
-        {System.out.println(regionsName[i]);
+        {
+            //Objects.equals requires API level 19 min
             if(Objects.equals(regionsName[i],this.currentRegion)){
-                System.out.println("heeeeeeeeeeeeeeeeeee");
                 myPosition=i;
                 isSetPosition=true;
             }
@@ -113,7 +100,6 @@ public class MainActivity extends FragmentActivity
 
 
         if(isSetPosition){
-            System.out.println(res.getStringArray(R.array.region_long));
 
             double longitude = Double.parseDouble(res.getStringArray(R.array.region_long)[myPosition]);
             double latitude =  Double.parseDouble(res.getStringArray(R.array.region_lat)[myPosition]);
@@ -131,7 +117,6 @@ public class MainActivity extends FragmentActivity
 
     public void setRegion(String currentRegion) {
         this.currentRegion = currentRegion;
-        //System.out.println("LOL");
     }
 
 
@@ -152,18 +137,16 @@ public class MainActivity extends FragmentActivity
 
 
     public void refresh(String tutUrl) {
-        Log.v("AndroidFragmentActivity", tutUrl);
+        Log.v("MainActivity Refresh", tutUrl);
 
         View view = findViewById(R.id.displayDetail);
 
         FragmentTransaction transaction =  getSupportFragmentManager().beginTransaction();
         if(view ==null){
-            System.out.println("view==null");
             createDetailFragement(R.id.displayList);
             detailFragment.setURLContent(tutUrl);
             transaction.replace(R.id.displayList, detailFragment).addToBackStack("listRegion");
         }else{
-            System.out.println("view!=nulll");
             if(detailFragment == null){
                 createDetailFragement(R.id.displayDetail);
                 detailFragment.setURLContent(tutUrl);
@@ -180,6 +163,5 @@ public class MainActivity extends FragmentActivity
 
     @Override
     public void onRegSelected(String tutUrl) {
-        System.out.println("onRegSelectedListener");
     }
 }

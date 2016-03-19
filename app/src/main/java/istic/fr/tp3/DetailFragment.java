@@ -97,7 +97,6 @@ public class DetailFragment extends Fragment {
 
     public void updateURLContent(String URL) {
         mURL = URL;
-        System.out.println("updateURLContent: "+URL);
         WebView myWebView = (WebView) getView().findViewById(R.id.pageInfo);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new MyWebViewClient());

@@ -39,9 +39,6 @@ public class MyListFragment extends ListFragment {
         ((MainActivity) getActivity()).setRegion(selectedValue);
         ((MainActivity) getActivity()).refresh(content);
 
-
-        //mListener.OnURLSelectedListener(content);
-        //mListener.OnCurrentRegionSelected(selectedValue);
     }
 
     @Override
