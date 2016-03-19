@@ -23,10 +23,13 @@ Tablette (avec 2 fragments).
 
 ### Resultat ###
 
+Sur smartphone :
 
+![alt text](images/android_tp3_smartphone.png "Smartphone list")  |  ![alt text](images/android_tp3_corse.png "Smartphone corse")
 
+Sur tablette :
 
+![alt text](images/android_tp3_web.png "Tablette web") 
 
-
-
+![alt text](images/Android_tp3_maps.png "Tablette maps")
 
