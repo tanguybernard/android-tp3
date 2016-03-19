@@ -29,7 +29,7 @@ Sur smartphone :
 
 Sur tablette :
 
-![alt text](images/android_tp3_web.png "Tablette web") 
+![alt text](images/Android_tp3_web.png "Tablette web") 
 
-![alt text](images/Android_tp3_maps.png "Tablette maps")
+![alt text](images/android_tp3_maps.png "Tablette maps")
 
