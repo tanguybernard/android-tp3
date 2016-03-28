@@ -9,11 +9,14 @@ Techniquement l’application utilisera des fragments dynamiques pour s’adapte
 L’application devre pouvoir tourner sur support Smartphone (avec un seul fragment) ou sur support
 Tablette (avec 2 fragments).
 
-### Configuration minimum requise ###
+### Configuration testé ###
+Smartphone: 
 
-* minimum: API 19
-* support de Google API's
-* tester sur X86
+* Nexus 5 API 21 X86  Google API's
+
+Tablette:
+
+* Nexus 10 API 21 X86 Google API's
 
 ### Installation ###
 
